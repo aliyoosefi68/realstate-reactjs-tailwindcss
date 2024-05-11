@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "bakh-light";
+  src: url("./fonts/YekanBakh-Light.woff"), format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bakh-medium";
+  src: url("./fonts/YekanBakh-Medium.woff"), format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bakh-bold";
+  src: url("./fonts/YekanBakh-Bold.woff"), format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-bakh-medium bg-gray-200;
+  }
+  .dropdown {
+    @apply w-full lg:max-w-[296px] cursor-pointer;
+  }
+  .dropdown-btn {
+    @apply flex h-[64px] items-center px-[18px] border rounded-lg;
+  }
+  .dropdown-icon-primary {
+    @apply text-2xl ml-[18px] text-violet-700;
+  }
+  .dropdown-icon-secondary {
+    @apply text-2xl text-violet-700 mr-auto;
+  }
+  .dropdown-menu {
+    @apply px-6 py-8 text-[15px] space-y-6 shadow-md bg-white absolute w-full z-10 list-none rounded-b-lg;
+  }
+}
